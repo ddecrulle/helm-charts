@@ -36,7 +36,7 @@ spec:
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "postgresql.secretName" . }}
+                  name: {{ template "postgresql.auth.existingSecret" . }}
                   key: postgres-password
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER
               value: {{ .Values.postgresql.auth.username}}
