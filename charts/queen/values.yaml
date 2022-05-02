@@ -134,7 +134,7 @@ api:
   env: {}
 
 postgresql:
-  fullnameOverride: hostname
+  fullnameOverride: queen-db
   postgresqlUsername: user
   postgresqlPassword: password
   postgresqlDatabase: app-db

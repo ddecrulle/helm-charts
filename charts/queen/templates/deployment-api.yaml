@@ -39,6 +39,8 @@ spec:
               value: {{ .Values.postgresql.postgresqlUsername}}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_HOST
               value: {{ .Values.postgresql.fullnameOverride}}
+            - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_SCHEMA
+              value: {{ .Values.postgresql.postgresqlDatabase}}
             {{- end }}
           envFrom:
             - configMapRef:
