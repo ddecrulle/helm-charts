@@ -135,6 +135,8 @@ api:
 
 postgresql:
   fullnameOverride: queen-db
-  postgresqlUsername: user
-  postgresqlPassword: password
-  postgresqlDatabase: app-db
+  auth:
+    username: user
+    password: password
+    database: app-db
+

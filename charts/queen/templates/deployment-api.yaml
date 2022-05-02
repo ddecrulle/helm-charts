@@ -34,13 +34,13 @@ spec:
           env:
             {{- if .Values.postgresql.enabled }}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD
-              value: {{ .Values.postgresql.postgresqlPassword}}
+              value: {{ .Values.postgresql.auth.password}}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER
-              value: {{ .Values.postgresql.postgresqlUsername}}
+              value: {{ .Values.postgresql.auth.username}}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_HOST
               value: {{ .Values.postgresql.fullnameOverride}}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_SCHEMA
-              value: {{ .Values.postgresql.postgresqlDatabase}}
+              value: {{ .Values.postgresql.auth.database}}
             {{- end }}
           envFrom:
             - configMapRef:
