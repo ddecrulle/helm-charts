@@ -69,12 +69,7 @@ ui:
 
   affinity: {}
 
-  env:
-    QUEEN_URL:
-    QUEEN_API_URL:
-    authenticationType: NONE
-    oidc_authority:
-    oidc_client_id:
+  env: {}
 
 api:
   name: api
@@ -111,41 +106,16 @@ api:
     # requests:
     #   cpu: 100m
     #   memory: 128Mi
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 100
+    targetCPUUtilizationPercentage: 80
+    # targetMemoryUtilizationPercentage: 80
   nodeSelector: {}
   tolerations: []
   affinity: {}
-  env:
-    JAVA_OPTS:  -Dlogging.config=${CATALINA_BASE}/webapps/log4j2.xml -Dspring.profiles.active=dev -Dspring.config.location=classpath:/,${CATALINA_BASE}/webapps/queenbo.properties
-    #Application configuration
-    FR_INSEE_QUEEN_APPLICATION_MODE: noauth
-    FR_INSEE_QUEEN_APPLICATION_CROSORIGIN: 
-    #Keycloak configuration
-    KEYCLOAK_REALM: 
-    KEYCLOAK_RESOURCE: 
-    KEYCLOAK_AUTH_SERVER_URL:
-    KEYCLOAK_SSS-REQUIRED: 
-    KEYCLOAK_PUBLIC_CLIENT: 
-    #Database configuration
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_HOST:
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PORT:
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_SCHEMA:
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER:
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD:
-    FR_INSEE_QUEEN_PERSISTENCE_DATABASE_DRIVER:
-    FR_INSEE_QUEEN_DEFAULTSCHEMA:
-    #Roles
-    FR_INSEE_QUEEN_INTERVIEWER_ROLE: 
-    FR_INSEE_QUEEN_REVIEWER_ROLE: 
-    FR_INSEE_QUEEN_ADMIN_ROLE: 
-    #Pilotage API :
-    FR_INSEE_QUEEN_PILOTAGE_SERVICE_URL_SCHEMA:
-    FR_INSEE_QUEEN_PILOTAGE_SERVICE_URL_HOST:
-    FR_INSEE_QUEEN_PILOTAGE_SERVICE_URL_PORT:
-    FR_INSEE_QUEEN_PILOTAGE_INTEGRATION_OVERRIDE: 
-    #Other claim to read roles from in token
-    FR_INSEE_QUEEN_TOKEN_CLAIM_ROLE:
-
-
+  env: {}
 
 postgresql:
   fullnameOverride: hostname

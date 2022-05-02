@@ -7,10 +7,10 @@ Collection of Helm (https://helm.sh/) Charts
 To use the repository on Helm (version 3+) :
 
 ```
-helm repo add inseefr https://ddecrulle.github.io/Helm-Charts
+helm repo add inseefr https://ddecrulle.github.io/helm-charts
 ```
 
-The repo is also browsable directly https://ddecrulle.github.io/Helm-Charts/index.yaml
+The repo is also browsable directly https://ddecrulle.github.io/helm-charts/index.yaml
 
 ## Developer's note
 
