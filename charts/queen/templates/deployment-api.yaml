@@ -34,6 +34,10 @@ spec:
           env:
             {{- if .Values.postgresql.enabled }}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.postgresql.fullnameOverride }}
+                  key: password
               value: {{ .Values.postgresql.auth.password}}
             - name: FR_INSEE_QUEEN_PERSISTENCE_DATABASE_USER
               value: {{ .Values.postgresql.auth.username}}
