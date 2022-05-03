@@ -134,9 +134,10 @@ api:
   env: {}
 
 postgresql:
+  enable: false
   fullnameOverride: queen-db
   auth:
     username: user
     password: password
+    postgresPassword: password
     database: app-db
-
