@@ -19,10 +19,6 @@ spec:
 {{ toYaml . | indent 8 }}
 {{- end }}
     spec:
-    {{- with .Values.api.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-    {{- end }}
       serviceAccountName: {{ include "queen.api.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.api.podSecurityContext | nindent 8 }}
