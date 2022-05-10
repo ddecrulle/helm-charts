@@ -9,7 +9,7 @@ api:
     repository: ddecrulle/knowledge-back-office
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: dev
+    tag: latest
 
   imagePullSecrets: []
   nameOverride: "knowledge-api"
@@ -98,7 +98,7 @@ ui:
     repository: ddecrulle/knowledge
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: dev
+    tag: latest
 
   env:
     API_URL: "https://chart-example-api.local"

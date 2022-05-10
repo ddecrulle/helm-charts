@@ -48,13 +48,17 @@ spec:
           resources:
             {{- toYaml .Values.api.resources | nindent 12 }}
           env:
-            - name: MONGODB_URI
+            - name: MONGODB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: knowledge-api-secret
-                  key: mongodb-uri
+                  name: {{ .Values.mongodb.fullnameOverride }}
+                  key: mongodb-passwords
+            - name: MONGODB_USERNAME
+              value: {{ .Values.mongodb.auth.username}}
             - name: MONGODB_DATABASE
-              value: knowledge
+              value: {{ .Values.mongodb.auth.database}}
+            - name: MONGODB_HOST
+              value:  mongodb-0.mongodb-headless
       {{- with .Values.api.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
