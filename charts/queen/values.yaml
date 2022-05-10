@@ -141,6 +141,6 @@ postgresql:
   fullnameOverride: queen-db
   auth:
     username: username
-    password: Userpassword
+    password: userPassword
     postgresPassword: postgresPassword
     database: app-db
