@@ -3,6 +3,20 @@ entries:
   knowledge:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-05-10T14:03:18.35113229Z"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.3
+    description: A Helm chart for Kubernetes
+    digest: de741a4fa1e712358361d8e0b25c00a1c62a346bb760f39350d64c4af5f3a3e0
+    name: knowledge
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/knowledge-0.1.2/knowledge-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-04-29T12:56:32.848178663Z"
     dependencies:
     - name: mongodb
@@ -16,6 +30,21 @@ entries:
     - https://github.com/ddecrulle/helm-chart/releases/download/knowledge-0.1.0/knowledge-0.1.0.tgz
     version: 0.1.0
   queen:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-10T14:03:18.547288989Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.26
+    description: A Helm chart for Queen
+    digest: 93d163d37d6e6249daf4a6ac912a5b40fc6128086b40847e213b7babb7b55668
+    name: queen
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/queen-0.2.1/queen-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-05-04T15:29:30.0483573Z"
@@ -276,4 +305,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-chart/releases/download/queen-0.1.0/queen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-04T15:29:30.048632497Z"
+generated: "2022-05-10T14:03:18.547694087Z"
