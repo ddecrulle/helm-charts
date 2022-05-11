@@ -32,6 +32,21 @@ entries:
   queen:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-05-11T09:48:05.202618692Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.26
+    description: A Helm chart for Queen
+    digest: e0dd4180e97aaad1c488c23b1cf0080c8513fb2853bee673b95370827faa0a6a
+    name: queen
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/queen-0.2.2/queen-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-05-10T14:03:18.547288989Z"
     dependencies:
     - condition: postgresql.enabled
@@ -305,4 +320,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-chart/releases/download/queen-0.1.0/queen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-10T14:03:18.547694087Z"
+generated: "2022-05-11T09:48:05.202775593Z"
