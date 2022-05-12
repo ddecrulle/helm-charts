@@ -3,6 +3,20 @@ entries:
   knowledge:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-05-12T13:08:43.47301545Z"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.3
+    description: A Helm chart for Kubernetes
+    digest: a91cfe2b2b403c408334f3d4130efd409481634e9175445096e1864c19f81c8e
+    name: knowledge
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/knowledge-0.1.4/knowledge-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-05-12T12:50:25.330879214Z"
     dependencies:
     - name: mongodb
@@ -334,4 +348,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-chart/releases/download/queen-0.1.0/queen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-12T12:50:25.330991416Z"
+generated: "2022-05-12T13:08:43.473256054Z"
