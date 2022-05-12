@@ -182,9 +182,9 @@ mongodb:
   fullnameOverride: mongodb
   architecture: replicaset
   auth:
-    rootPassword: changeme
+    rootPassword: rootPassword
     username: username
-    password: changeme
+    password: password
     database: defaultdb
     replicasetKey: default
   replicaCount: 3

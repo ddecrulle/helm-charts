@@ -1,3 +1,14 @@
+{{- $replicaCount := int .Values.mongodb.replicaCount }}
+{{- $portNumber := int .Values.mongodb.service.port }}
+{{- $fullname := include "mongodb.fullname" . }}
+{{- $user := .Values.mongodb.auth.username }}
+{{- $password := .Values.mongodb.auth.password }}
+{{- $db := .Values.mongodb.auth.database }}
+{{- $pvcList := list }}
+{{- $mongoList := list }}
+{{- range $e, $i := until $replicaCount }}
+{{- $mongoList = append $mongoList (printf "%s-%d.%s-headless:%d" $fullname $i $fullname $portNumber) }}
+{{- end }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -48,17 +59,10 @@ spec:
           resources:
             {{- toYaml .Values.api.resources | nindent 12 }}
           env:
-            - name: MONGODB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.mongodb.fullnameOverride }}
-                  key: mongodb-passwords
-            - name: MONGODB_USERNAME
-              value: {{ .Values.mongodb.auth.username}}
+            - name: MONGODB_URI
+              value: mongodb://{{ $user }}:{{ $password }}@{{ (include "mongoList" .)}}/{{ $db }}
             - name: MONGODB_DATABASE
-              value: {{ .Values.mongodb.auth.database}}
-            - name: MONGODB_HOST
-              value:  mongodb-0.mongodb-headless
+              value: {{ $db }}
       {{- with .Values.api.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
