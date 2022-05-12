@@ -23,6 +23,19 @@ If release name contains chart name it will be used as a full name.
 {{- end }}
 {{- end }}
 
+{{- define "knowledge.mongodb.fullname" -}}
+{{- if .Values.mongodb.fullnameOverride }}
+{{- .Values.mongodb.fullnameOverride | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- $name := default .Chart.Name .Values.mongodb.nameOverride }}
+{{- if contains $name .Release.Name }}
+{{- .Release.Name | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" }}
+{{- end }}
+{{- end }}
+{{- end }}
+
 {{/*
 Create chart name and version as used by the chart label.
 */}}
@@ -132,7 +145,7 @@ Create list of mongo host
 {{- define "mongoList" -}}
 {{- $replicaCount := int .Values.mongodb.replicaCount }}
 {{- $portNumber := int .Values.mongodb.service.port }}
-{{- $fullname := include "mongodb.fullname" . }}
+{{- $fullname := include "knowledge.mongodb.fullname" . }}
 {{- $mongoList := list }}
 {{- range $e, $i := until $replicaCount }}
 {{- $mongoList = append $mongoList (printf "%s-%d.%s-headless:%d" $fullname $i $fullname $portNumber) }}
