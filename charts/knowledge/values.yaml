@@ -183,8 +183,8 @@ mongodb:
   architecture: replicaset
   auth:
     rootPassword: rootPassword
-    username: username
-    password: password
-    database: defaultdb
+    usernames: [username]
+    passwords: [password]
+    databases: [defaultdb]
     replicasetKey: default
   replicaCount: 3

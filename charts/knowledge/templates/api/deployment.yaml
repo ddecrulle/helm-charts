@@ -60,7 +60,7 @@ spec:
             {{- toYaml .Values.api.resources | nindent 12 }}
           env:
             - name: MONGODB_URI
-              value: mongodb://{{ $user }}:{{ $password }}@{{ (include "mongoList" .)}}/{{ $db }}
+              value: mongodb://{{ $user }}:{{ $password }}@{{ (include "mongoList" .)}}/{{ $db }}?authSource={{ $db }}
             - name: MONGODB_DATABASE
               value: {{ $db }}
       {{- with .Values.api.nodeSelector }}
