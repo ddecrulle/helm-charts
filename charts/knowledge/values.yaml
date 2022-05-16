@@ -183,8 +183,9 @@ mongodb:
   architecture: replicaset
   auth:
     rootPassword: rootPassword
-    usernames: [username]
-    passwords: [password]
-    databases: [defaultdb]
+    #TODO : Depreceated use aray for usernames, passwords and databases
+    username: username
+    password: password
+    database: defaultdb
     replicasetKey: default
   replicaCount: 3
