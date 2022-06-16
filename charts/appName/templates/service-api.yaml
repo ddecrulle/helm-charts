@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: { { include "appName.api.fullname" . } }
+  labels: { { - include "appName.api.labels" . | nindent 4 } }
+spec:
+  type: { { .Values.api.service.type } }
+  ports:
+    - port: { { .Values.api.service.port } }
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector: { { - include "appName.api.selectorLabels" . | nindent 4 } }
