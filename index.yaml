@@ -14,6 +14,21 @@ entries:
   knowledge:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-12-22T14:23:21.636019119Z"
+    dependencies:
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.6.1
+    description: A Helm chart for Knowledge API, UI and DB
+    digest: 59a0ef312365c28d1877e84491d7f4f2b60b048be675139c04d387601bc94c7c
+    name: knowledge
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/knowledge-0.3.7/knowledge-0.3.7.tgz
+    version: 0.3.7
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-12-22T14:20:35.33645049Z"
     dependencies:
     - condition: mongodb.enabled
@@ -508,4 +523,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-charts/releases/download/stromae-v2-0.3.3/stromae-v2-0.3.3.tgz
     version: 0.3.3
-generated: "2022-12-22T14:20:35.336585994Z"
+generated: "2022-12-22T14:23:21.636161718Z"
