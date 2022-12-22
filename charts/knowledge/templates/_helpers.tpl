@@ -21,7 +21,7 @@ If release name contains chart name it will be used as a full name.
 {{- if .Values.api.fullnameOverride }}
 {{- .Values.api.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
-{{- $name := default .Chart.Name .Values.api.nameOverride }}
+{{- $name := default (printf "%s-api" .Chart.Name ) .Values.api.nameOverride }}
 {{- if contains $name .Release.Name }}
 {{- .Release.Name | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -34,7 +34,7 @@ If release name contains chart name it will be used as a full name.
 {{- if .Values.ui.fullnameOverride }}
 {{- .Values.ui.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
-{{- $name := default .Chart.Name .Values.ui.nameOverride }}
+{{- $name := default (printf "%s-ui" .Chart.Name ) .Values.ui.nameOverride }}
 {{- if contains $name .Release.Name }}
 {{- .Release.Name | trunc 63 | trimSuffix "-" }}
 {{- else }}
