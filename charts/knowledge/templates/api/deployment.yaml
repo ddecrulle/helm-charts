@@ -1,5 +1,6 @@
 {{- if .Values.api.enabled -}}
-{{- $secretName := include "knowledge.mongodb.fullname" . }}
+{{- $mongodbFullname := include "knowledge.mongodb.fullname" . }}
+{{- $secretName := printf "%s-discovery" $mongodbFullname -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
