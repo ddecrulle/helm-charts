@@ -89,7 +89,7 @@ ui:
   env: {}
 
 api:
-  enabled: true
+  enabled: false
   replicaCount: 1
 
   image:
@@ -176,7 +176,7 @@ api:
   env: {}
 
 mongodb:
-  enabled: true
+  enabled: false
   resources: {}
   fullnameOverride: ""
   nameOverride: ""
