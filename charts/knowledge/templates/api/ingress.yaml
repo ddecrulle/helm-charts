@@ -1,4 +1,4 @@
-{{- if .Values.api.ingress.enabled -}}
+{{- if and .Values.api.enabled .Values.api.ingress.enabled -}}
 {{- $fullNameApi := include "knowledge.api.fullname" . -}}
 {{- $apiSvcPort := .Values.api.service.port -}}
 {{- if and .Values.api.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
