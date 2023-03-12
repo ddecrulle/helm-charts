@@ -264,6 +264,16 @@ entries:
   queen:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-03-12T11:41:12.28996194Z"
+    description: A Helm chart for Kubernetes
+    digest: 49cf6fbdea192f985d0b3e33efc4d09c23738a3e7afaa2929dcf320e7aa3c6e1
+    name: queen
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/queen-0.3.0/queen-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-05-11T09:48:05.202618692Z"
     dependencies:
     - condition: postgresql.enabled
@@ -568,4 +578,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-charts/releases/download/stromae-v2-0.3.3/stromae-v2-0.3.3.tgz
     version: 0.3.3
-generated: "2023-02-03T16:43:14.762955407Z"
+generated: "2023-03-12T11:41:12.290226539Z"
