@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "queen.fullname" . }}
+  name: {{ template "queen-v2.fullname" . }}
   labels:
-    app: {{ template "queen.name" . }}
+    app: {{ template "queen-v2.name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
