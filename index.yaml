@@ -11,6 +11,17 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-charts/releases/download/appName-0.1.0/appName-0.1.0.tgz
     version: 0.1.0
+  drama-queen:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-12T11:57:58.352469217Z"
+    description: A Helm chart for Kubernetes
+    digest: 810a042980b57e73a5082549a10c518cd02bb41cdefafdcd2500576d67912d4f
+    name: drama-queen
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/drama-queen-0.1.2/drama-queen-0.1.2.tgz
+    version: 0.1.2
   knowledge:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -562,6 +573,17 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-chart/releases/download/queen-0.1.0/queen-0.1.0.tgz
     version: 0.1.0
+  queen-v2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-12T11:57:58.511687417Z"
+    description: A Helm chart for Kubernetes
+    digest: b55b8dd4e7646a3ccd0570311882aeb89743c45005c92b5df7e3eef231cf143d
+    name: queen-v2
+    type: application
+    urls:
+    - https://github.com/ddecrulle/helm-charts/releases/download/queen-v2-0.1.2/queen-v2-0.1.2.tgz
+    version: 0.1.2
   stromae-v2:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -578,4 +600,4 @@ entries:
     urls:
     - https://github.com/ddecrulle/helm-charts/releases/download/stromae-v2-0.3.3/stromae-v2-0.3.3.tgz
     version: 0.3.3
-generated: "2023-03-12T11:41:12.290226539Z"
+generated: "2023-03-12T11:57:58.51192092Z"
