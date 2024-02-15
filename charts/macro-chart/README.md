@@ -20,11 +20,7 @@ Before running the charts locally, ensure that you have the following prerequisi
 
    This command creates a `.tgz` package for each subchart.
 
-2. **Update Dependency Repository:**
-
-   Open the `Chart.yaml` file in the root directory of the MacroChart repository and replace the `dependencies.repository` value with the correct repository URL based on your local setup.
-
-3. **Run Helm Install:**
+2. **Run Helm Install:**
 
    Once the subcharts are packaged and the dependency repository is updated, you can template the MacroChart locally using the following command:
 

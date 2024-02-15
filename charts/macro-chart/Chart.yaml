@@ -8,9 +8,8 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: sub1
-    repository: file:///Users/dylan/Documents/Github/Helm-chart/charts/sub1
+    repository: file://../sub1
     version: 0.1.x
   - name: sub2
-    repository: file:///Users/dylan/Documents/Github/Helm-chart/charts/sub2
+    repository: file://../sub2
     version: 0.1.x
-
