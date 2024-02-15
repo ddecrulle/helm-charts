@@ -1,0 +1,16 @@
+apiVersion: v2
+name: macro-chart
+description: A Helm chart for Kubernetes
+
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+dependencies:
+  - name: sub1
+    repository: file:///Users/dylan/Documents/Github/Helm-chart/charts/sub1
+    version: 0.1.x
+  - name: sub2
+    repository: file:///Users/dylan/Documents/Github/Helm-chart/charts/sub2
+    version: 0.1.x
+

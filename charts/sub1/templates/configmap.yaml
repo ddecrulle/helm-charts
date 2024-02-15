@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sub1
+data:
+{{- if .Values.env }}
+{{ include "render-value" ( dict "value" .Values.env "context" .) | indent 2}}
+{{- end }}
+  host: {{ include "render-value" (dict "value" .Values.sub1Host "context" .) }}

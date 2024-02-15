@@ -1,0 +1,13 @@
+global:
+  sub1Host: sub1-host-global
+  sub2Host: sub2-host-global
+sub1:
+  sub1Host: "{{ .Values.global.sub1Host }}"
+  env:
+    staticVar: staticVar
+    varNameFromGlobal: "{{ .Values.global.sub2Host }}"
+sub2:
+  sub2Host: "{{ .Values.global.sub2Host }}"
+  env:
+    staticVar: staticVar
+    varNameFromGlobal: "{{ .Values.global.sub1Host }}"
